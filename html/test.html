@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            /* 方法1 */
+            main.w1 {
+                background-color: cornflowerblue;
+                overflow: hidden;
+                position: relative;
+                height: 500px;
+            }
+            main.w1 > div {
+                width: 1000px;
+                height: auto;
+                background-color: chocolate;
+                transform: translate(-50%, -50%);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                text-align: center;
+            }
+            /* 方法2 */
+            main.w2 {
+                display: flex;
+                height: 200px;
+                background-color: cornflowerblue;
+                justify-content: center;
+                align-items: center;
+            }    
+            main.w2 > div {
+                width: 8000px;
+                height: auto;
+                background-color: chocolate;
+                text-align: center;
+            }
+
+            /* 方法3 */
+            main.w3 {
+                background-color: cornflowerblue;
+                height: 500px;
+                position: relative;
+            }
+            main.w3 > div {
+                background-color: chocolate;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 1000px;
+                margin-left: -500px;
+                height: 100px;
+                margin-top: -50px;
+                text-align: center;
+            }
+
+            /* 方法4 */
+            main.w4 {
+                background-color: cornflowerblue;
+                height: 500px;
+                position: relative;
+            }
+            main.w4 > div {
+                height: 100px;
+                width: 1000px;
+                background-color: chocolate;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                text-align: center;
+                /* transform: scaleY(0.5); */
+            }
+            .div1 {
+                height: 500px;
+                border: chartreuse 1px solid;
+                display: flex;
+                flex-direction: column;
+            }
+            .d1 {
+                height: 50px;
+                background-color: antiquewhite;
+            }
+            .d2 {
+                height: 50px;
+                background-color:aqua;
+                flex-grow: 1;
+                overflow: scroll;
+            }
+            .d3 {
+                height: 50px;
+                background-color:blueviolet;
+            }
+            .d4 {
+                height: 4000px;
+                background-color: coral;
+            }
+        </style>
+    </head>
+    <body>
+        <main class="w4">
+            <div>I am me.</div>
+        </main>
+        <div class="div1">
+            <div class="d1"></div>
+            <div class="d2">
+                <div class="d4"></div>
+            </div>
+            <div class="d3"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+<style>
+    /* 
+        outline绘制在border之外，不占据布局空间。
+        合模型的背景绘制到达border。
+        border的颜色在背景之上，默认为黑色， 
+        把border的颜色设置为透明色，即可显示背景色。
+    */
+p 
+{
+	border:5px solid transparent;
+	border:5px solid red;
+	outline:green dotted thick;
+	margin: 100px;
+	padding: 5px;
+	background-color: yellow;
+}
+</style>
+</head>
+
+<body>
+<p>
+    <b>注意:</b>
+    outline绘制在border之外，不占据布局空间。<br>
+    合模型的背景绘制到达border。<br>
+    border的颜色在背景之上，默认为黑色， <br>
+    把border的颜色设置为透明色，即可显示背景色。<br>
+</p>
+</body>
+</html>

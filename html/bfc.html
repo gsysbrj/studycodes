@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    html {
+        background-color: lightseagreen;
+        width: 50%;
+    }
+    body {
+        width: 50%;
+        /* position: absolute; */
+        /* top: 0; */
+        /* left: 0; */
+        /* 背景色属性表现得像整个视口 */
+        background-color: lightblue; 
+        /* 也是针对视口 */
+        /* overflow: hidden; */
+        /* 非针对视口 */
+        /* height: 500px; */
+        /* 非针对视口 */
+        border: lightcoral solid;
+        /* 非针对视口 */
+        /* margin: 0 100px; */
+        /* body非BFC */
+        display: inline-block;
+    }
+ 
+    .left {
+        width: 100px;
+        height: 300px;
+        float: left;
+        background: rgb(139, 214, 78);
+        text-align: center;
+        /* line-height: 150px; */
+        font-size: 20px;
+    }
+ 
+    .right {
+        overflow: hidden;
+        /* height: 300px; */
+        /* width: 500px; */
+        background: rgb(170, 54, 236);
+        padding: 45px;
+        float: left;
+        /* position: absolute; */
+        /* bottom: 0px; */
+        /* right: 0; */
+    }
+
+    .inner {
+        width: 200px;
+        height: 2000px;
+        background-color: greenyellow;
+        float: right;
+    }
+</style>
+<body>
+    <div class="left">LEFT</div>
+    <div class="left" style="width: 150px;">LEFT</div>
+    <div class="right">
+        <div class="inner">
+            BFC特征：<br>
+                1，独立的布局空间，不与周围任何元素重叠，包括浮动元素；<br>
+                2，由于1而表现出几个特征，比如，会为左边的浮动元素（无论其左浮动还是右浮动）让
+                出空间而缩小自己的宽度，会为了包含住自己内部的浮动元素
+                而扩大自己（非bfc的块不会为了包住浮动元素而扩大自己）；
+        </div>
+    </div>
+</body>
+</html>
