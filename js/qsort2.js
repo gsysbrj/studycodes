@@ -203,8 +203,8 @@ console.log(arr.toString())
 // insertionSort(arr);
 // quickSort(arr, 0, arr.length-1);
 // mergeSort(arr, 0, arr.length-1)
-// heapSort(arr)
-shellSort(arr)
+heapSort(arr)
+// shellSort(arr)
 console.log(arr.toString());
 
 
